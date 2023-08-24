@@ -1,0 +1,36 @@
+{
+  "name": "moca_node_bird",
+  "version": "1.0.0",
+  "description": "익스프레스로 만드는 SNS 클론 코딩",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.1.0",
+    "nunjucks": "^3.2.1",
+    "sequelize": "^6.19.0",
+    "sequelize-cli": "^6.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/softmoca/node_express_SNS.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "softmoca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/softmoca/node_express_SNS/issues"
+  },
+  "homepage": "https://github.com/softmoca/node_express_SNS#readme"
+}
