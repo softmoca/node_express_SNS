@@ -4,7 +4,8 @@
   "description": "익스프레스로 만드는 SNS 클론 코딩",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app"
+    "start": "nodemon app",
+    "test": "jest"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
@@ -23,6 +24,7 @@
     "sequelize-cli": "^6.4.1"
   },
   "devDependencies": {
+    "jest": "^29.6.4",
     "nodemon": "^2.0.22"
   },
   "repository": {
