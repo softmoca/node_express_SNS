@@ -34,6 +34,7 @@ nunjucks.configure("views", {
   express: app,
   watch: true,
 });
+
 sequelize
   .sync({ force: false })
   .then(() => {
@@ -61,7 +62,6 @@ app.use("/img", express.static(path.join(__dirname, "uploads")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser(process.env.COOKIE_SECRET));
-
 const sessionOption = {
   resave: false,
   saveUninitialized: false,
@@ -77,7 +77,6 @@ if (process.env.NODE_ENV === "production") {
   // sessionOption.cookie.secure = true;
 }
 app.use(session(sessionOption));
-
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -95,6 +94,7 @@ app.use((req, res, next) => {
 });
 
 app.use((err, req, res, next) => {
+  console.error(err);
   res.locals.message = err.message;
   res.locals.error = process.env.NODE_ENV !== "production" ? err : {};
   res.status(err.status || 500);
